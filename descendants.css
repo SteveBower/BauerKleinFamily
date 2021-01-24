@@ -1,0 +1,328 @@
+/*
+	Colors - see list at https://www.w3schools.com/colors/colors_hex.asp
+	
+	DarkGray			Horizontal lines
+	DarkBlue			Hyperlinks
+	rgb(70, 100, 60)	Dark green matching the headings in Descendants Vol. 1
+*/
+
+/* Meyer's CSS reset - see https://bitsofco.de/a-look-at-css-resets-in-2018/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var, /*sup,*/
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 25px 0 20px; /* 25px leaves room for tooltips */
+    color: black;
+    background-color: white;
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+div.title-page {
+    margin: 32px 4px 64px 4px;
+    font-family: "Bookman Old Style", "Book Antiqua", Garamond, "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+div.title {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: single;
+}
+
+div.sub-title {
+    margin-top: 32px;
+    font-size: 16px;
+}
+
+div.copyright {
+    max-width: 700px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 0;
+    border-width: 0;
+    empty-cells: show;
+    margin-right: 25px; /* leave some room for tooltips */
+}
+
+td {
+    vertical-align: top;
+    padding-top: 9px;
+}
+
+/* Horizontal line at top of the table */
+.horizontal-line {
+    /* background-color: DarkGrey; */
+}
+
+/* heading-1, including "Generation" headings */
+h1, .heading-1 {
+    margin-right: 25px; /* consistent with <table>, where it leaves space for tooltips */
+    margin-bottom: 1em;
+    padding: 8px 2px;
+    background-color: rgb(70, 100, 60);
+    color: White;
+    font-family: "Bookman Old Style", "Book Antiqua", Garamond, "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-top: White 32px solid; /* add space above in <td> element */
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15px; /* consistent with FTM inline style */
+}
+
+h2 {
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+    color: rgb(70, 100, 60);
+    font-family: "Bookman Old Style", "Book Antiqua", Garamond, "Times New Roman", Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+div.toc-h1 {
+    padding-left: 4em;
+    padding-bottom: 0.4em;
+}
+
+div.toc-h2 {
+    padding-left: 6em;
+    padding-bottom: 0.4em;
+}
+
+/* "[Father] and [Mother] had the following children...", comes after parents' bio */
+.had-children {
+    font-size: 16px;
+}
+
+/* Outline number */
+.num {
+    /* background-color: transparent; */
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* Person bio, applied to <td> */
+.bio {
+    vertical-align: top;
+    /* background-color: transparent; */
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-size: 16px;
+}
+
+/* Parent name after first letter */
+.parent {
+    /* background-color: transparent; */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Child name after first letter */
+.child {
+    /* background-color: transparent; */
+    font-size: 14px;
+}
+
+/* Parent name initial letter */
+.p1 {
+    /* background-color: transparent; */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Normal text, and child name initial */
+.txt {
+    /* background-color: transparent; */
+    font-size: 16px;
+}
+
+/* <p> in bio section */
+p.p-bio {
+    text-align: left;
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    margin-block-start: unset; /* override user agent stylesheet */
+    margin-block-end: unset; /* override user agent stylesheet */
+    line-height: 1.4;
+}
+
+/* <p> for "He/She married ... */
+p.married {
+    margin-block-start: unset; /* override user agent stylesheet */
+    margin-block-end: unset; /* override user agent stylesheet */
+    padding-top: 1em;
+    line-height: 1.4em;
+}
+
+p.marriage-order {
+    padding-left: 4em;
+    line-height: 1.4em;
+}
+
+/* standard <p> text for Introduction/Convention sections */
+p.stnd {
+    max-width: calc(100% - 25px); /* 25px to be consistent with the listing, leaving room for tooltips */
+    margin-bottom: 16px;
+    line-height: 1.4em;
+}
+
+p.hang-indent {
+    text-indent: 2em;
+}
+
+p.volume {
+    padding-left: 6em;
+    text-indent: -2em;
+    margin-right: 4em;
+}
+
+p.small {
+    font-size: 80%;
+}
+
+.double-indent {
+    padding-left: 4em;
+    margin-right: 2em
+}
+
+.triple-indent {
+    padding-left: 6em;
+    margin-right: 4em;
+}
+
+/* Superscript */
+.sup {
+    font-family: "Times New Roman", Times, serif;
+    /* background-color: transparent; */
+    vertical-align: super;
+    font-size: smaller;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* For image, applied to <div> */
+.imgDiv {
+    float: right;
+    width: 150px;
+    padding: 5px 0 5px 10px;
+    text-align: center;
+    font-size: 90%;
+}
+
+/* For image, applied to <img> */
+.bioImg {
+    /* Images in the bio sections, parent or child */ 
+    padding: 0 0 5px 0;
+}
+
+a {
+    text-decoration: underline dotted CornflowerBlue;
+}
+
+img {
+    border-width: 0;
+    max-width: 100%;
+    height: auto;
+    height: auto\9 /* IE8 */
+}
+
+ul {
+    padding-bottom: 12px;
+}
+
+li {
+    padding-bottom: 8px;
+}
+
+#locations-table {
+    margin-right: 0px;
+    padding-left: 6em;
+    border: none;
+}
+
+#locations-table td {
+    padding-right: 1.5em;
+}
+
+/* elements extending over the full page width */
+.full-width {
+    max-width: calc(100% - 25px); /* 25px less than <body> to account for margin left for tooltip display */
+    min-width: 600px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dotted DarkBlue; /* add dots under hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(70, 100, 60);
+    color: White;
+    text-align: center;
+    padding: 4px;
+    border: solid 1px White;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.2em;
+ 
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* half the width to center the tooltip */
+
+    z-index: 1;
+}
+
+/* Show tooltip text on hover over tooltip container */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    transition-delay: 1.2s;
+}
+
